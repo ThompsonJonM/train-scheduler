@@ -1,10 +1,18 @@
 HOW TO USE
 
-
+Simply enter train information into the five fields at the bottom of the page. This information is stored in a firebase.js database which then appends the information onto the website layout.
 
 CHANGELOG
 
 READ FROM BOTTOM TO TOP
+
+20170616 - 1339
+
+LOGIC.JS: Logic finished. Input validation needs to be constructed.
+
+INDEX.HTML: Cleaned up issues with the table layout. Originally had a table row within the table body which was blank. This caused the appended input to file all into one column within the row.
+
+STYLE.CSS: Styled the tables so that the text appears centered.
 
 20170616 - 1108
 

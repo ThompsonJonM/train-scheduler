@@ -23,10 +23,16 @@ h1 {
 	color: white !important;
 }
 
+th {
+	text-align: center !important;
+}
+
 
 /*Individual IDs*/
 
-
+#boardText {
+	text-align: center;
+}
 
 /*Classes*/
 
