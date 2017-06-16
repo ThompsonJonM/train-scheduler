@@ -46,6 +46,7 @@
 					<thead>
 						<tr>
 							<th>Train Name</th>
+							<th>Train Number</th>
 							<th>Destination</th>
 							<th>Frequency (in mins.)</th>
 							<th>Next Arrival (HHMM)</th>
@@ -88,13 +89,18 @@
 						</div>
 
 						<div class="form-group">
+							<label for="trainNumber">Train Number</label>
+							<input type="text" class="formControl" id="numberInput" placeholder="Enter a Train ID Number">
+						</div>
+
+						<div class="form-group">
 							<label for="destForm">Destination</label>
 							<input type="text" class="formControl" id="destInput" placeholder="Enter a Destination">
 						</div>
 
 						<div class="form-group">
 							<label for="firstTrain">First Train Time (HHMM 24 Hour Format)</label>
-							<input type="text" class="formControl" id="firstTrainInput" placeholder="eg. 1430">
+							<input type="text" class="formControl" id="timeInput" placeholder="eg. 1430">
 						</div>
 
 						<div class="form-group">
@@ -105,6 +111,10 @@
 
 					<button class="btn btn-primary submitInput">
 						Submit
+					</button>
+
+					<button class="btn btn-secondary resetInput">
+						Reset
 					</button>
 
 				</div>

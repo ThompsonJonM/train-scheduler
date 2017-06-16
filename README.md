@@ -6,6 +6,12 @@ CHANGELOG
 
 READ FROM BOTTOM TO TOP
 
+20170616 - 1108
+
+LOGIC.JS: Began writing variables for submit function.
+
+INDEX.HTML: Added train number input and reset button. I figure adding a train number allows the app to look a little more realistic as trains are searchable by individual ID #'s.
+
 20160616 - 0949 
 
 STYLE.CSS: Styling done.
