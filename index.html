@@ -85,7 +85,31 @@
 
 					<div class="panel-body">
 				
-						form input goes here
+						<form>
+							<div class="form-group">
+								<label for="trainName">Train Name</label>
+								<input type="text" class="formControl" id="nameInput" placeholder="Enter a Train">
+							</div>
+
+							<div class="form-group">
+								<label for="destForm">Destination</label>
+								<input type="text" class="formControl" id="destInput" placeholder="Enter a Destination">
+							</div>
+
+							<div class="form-group">
+								<label for="firstTrain">First Train Time (HHMM 24 Hour Format)</label>
+								<input type="text" class="formControl" id="firstTrainInput" placeholder="Enter a Time">
+							</div>
+
+							<div class="form-group">
+								<label for="freqForm">Frequency (in minutes)</label>
+								<input type="text" class="formControl" id="freqInput" placeholder="30 minutes">
+							</div>
+						</form>
+
+						<button class="btn btn-primary submitInput">
+							Submit
+						</button>
 
 					</div>
 
