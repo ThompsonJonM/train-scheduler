@@ -21,51 +21,45 @@
 <!-- Header Div -->
 <header>
 	<div class="container">
-		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 myHeader">
-				<h1 id="headerFont">Train Scheduler</h1>
-			</div>
+		<div class="jumbotron myHeader">
+			<h1>Train Scheduler</h1>
 		</div>
 	</div>
 </header>
 
-<div id="pageContent">
+<div class="container bodyContent">
 
-	<div class="container bodyContent">
+	<div class="row pageRow">
 
-		<div class="row pageRow">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 scheduleBoard">
 
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 scheduleBoard">
+			<div class="panel panel-primary">
 
-				<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h4>Train Schedule</h4>
+				</div>
+				
+				<div class="panel-body">
 
-					<div class="panel-heading">
-						<h3>Train Schedule</h3>
-					</div>
+					<table class="table table-hover table-responsive" id="boardTable">
 					
-					<div class="panel-body">
+					<thead>
+						<tr>
+							<th>Train Name</th>
+							<th>Destination</th>
+							<th>Frequency (in mins.)</th>
+							<th>Next Arrival (HHMM)</th>
+							<th>Minutes Away</th>
+						</tr>
+					</thead>
 
-						<table class="table table-hover table-responsive" id="boardTable">
-						
-						<thead>
-							<tr>
-								<th>Train Name</th>
-								<th>Destination</th>
-								<th>Frequency (in minutes)</th>
-								<th>Next Arrival (HHMM)</th>
-								<th>Minutes Away</th>
-							</tr>
-						</thead>
+					<tbody id="boardText">
+						<tr>
+							
+						</tr>
+					</tbody>
 
-						<tbody id="boardText">
-							<tr>
-								
-							</tr>
-						</tbody>
-
-						</table>
-
-					</div>
+					</table>
 
 				</div>
 
@@ -73,53 +67,53 @@
 
 		</div>
 
-		<div class="row pageRow">
+	</div>
+
+	<div class="row pageRow">
+		
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+			<div class="panel panel-primary">
+
+				<div class="panel-heading">
+					<h4>Add Train</h4>
+				</div>
+
+				<div class="panel-body">
 			
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<form>
+						<div class="form-group">
+							<label for="trainName">Train Name</label>
+							<input type="text" class="formControl" id="nameInput" placeholder="Enter a Train">
+						</div>
 
-				<div class="panel panel-primary">
+						<div class="form-group">
+							<label for="destForm">Destination</label>
+							<input type="text" class="formControl" id="destInput" placeholder="Enter a Destination">
+						</div>
 
-					<div class="panel-heading">
-						<h4>Add Train</h4>
-					</div>
+						<div class="form-group">
+							<label for="firstTrain">First Train Time (HHMM 24 Hour Format)</label>
+							<input type="text" class="formControl" id="firstTrainInput" placeholder="eg. 1430">
+						</div>
 
-					<div class="panel-body">
-				
-						<form>
-							<div class="form-group">
-								<label for="trainName">Train Name</label>
-								<input type="text" class="formControl" id="nameInput" placeholder="Enter a Train">
-							</div>
+						<div class="form-group">
+							<label for="freqForm">Frequency (in mins.)</label>
+							<input type="text" class="formControl" id="freqInput" placeholder="eg. 30 minutes">
+						</div>
+					</form>
 
-							<div class="form-group">
-								<label for="destForm">Destination</label>
-								<input type="text" class="formControl" id="destInput" placeholder="Enter a Destination">
-							</div>
-
-							<div class="form-group">
-								<label for="firstTrain">First Train Time (HHMM 24 Hour Format)</label>
-								<input type="text" class="formControl" id="firstTrainInput" placeholder="Enter a Time">
-							</div>
-
-							<div class="form-group">
-								<label for="freqForm">Frequency (in minutes)</label>
-								<input type="text" class="formControl" id="freqInput" placeholder="30 minutes">
-							</div>
-						</form>
-
-						<button class="btn btn-primary submitInput">
-							Submit
-						</button>
-
-					</div>
+					<button class="btn btn-primary submitInput">
+						Submit
+					</button>
 
 				</div>
 
 			</div>
 
-		</div>	
+		</div>
 
-	</div>
+	</div>	
 
 </div>
 
