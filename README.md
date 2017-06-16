@@ -1,1 +1,11 @@
-# train-scheduler
+HOW TO USE
+
+
+
+CHANGELOG
+
+READ FROM BOTTOM TO TOP
+
+20170616 - 0817
+
+All files: Initial creation.
