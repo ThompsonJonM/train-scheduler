@@ -28,20 +28,27 @@ $(document).ready(function() {
 
 			var frequencyInput = $("#freqInput").val().trim();
 
-			//use the collected input (above) and port it to firebase db
+			//input validation
+			if (nameInput != "" &&
+				numberInput != "" &&
+				destinationInput != "" &&
+				timeInput != "" &&
+				frequencyInput != "") {
 
-			database.ref().push({
-				name: nameInput,
-				number: numberInput,
-				destination: destinationInput,
-				time: timeInput,
-				frequency: frequencyInput,
-				timeAdded: firebase.database.ServerValue.TIMESTAMP
-			});
+					//use the collected input (above) and port it to firebase db
+					database.ref().push({
+						name: nameInput,
+						number: numberInput,
+						destination: destinationInput,
+						time: timeInput,
+						frequency: frequencyInput,
+					});
 
-			// console.log(database);
+			} else {
+				return false;
+			}
 
-			// $("input").empty();
+			//console.log(database);
 
 			$("input").val("");
 
@@ -63,41 +70,41 @@ $(document).ready(function() {
 		var frequency = parseInt(frequency);
 		var currentTime = moment();
 
-		console.log("Current time: " + moment().format("HHmm"));
+		//console.log("Current time: " + moment().format("HHmm"));
 
 		//originally used mil format of HHMM but that failed with a null value
 		//looked up potential faults and it turns out that moment.js must use
 		//HH:mm for mil/euro time format
 		var dateConvert = moment(childSnapshot.val().time, "HHmm").subtract(1, "years");
 
-		console.log("DATE CONVERTED: " + dateConvert);
+		//console.log("DATE CONVERTED: " + dateConvert);
 
 		var trainTime = moment(dateConvert).format("HHmm");
 
-		console.log("Train time : " + trainTime);
+		//console.log("Train time : " + trainTime);
 
 		//difference bw the times
 		var timeConvert = moment(trainTime, "HHmm").subtract(1, "years");
 		var timeDifference = moment().diff(moment(timeConvert), "minutes");
 
-		console.log("Difference in time: " + timeDifference);
+		//console.log("Difference in time: " + timeDifference);
 
 		//remainder
 		var timeRemaining = timeDifference % frequency;
 
-		console.log("Time remaining: " + timeRemaining);
+		//console.log("Time remaining: " + timeRemaining);
 
 		//time until next train
 		var timeAway = frequency - timeRemaining;
 
-		console.log("Minutes until next train: " + timeAway);
+		//console.log("Minutes until next train: " + timeAway);
 
 		//next train arrival
 		var nextArrival = moment().add(timeAway, "minutes");
 
 		//figured out that adding "A" at the end of HH:mm will add AM or PM
 		//given that this is mil/euro format, the AM/PM is not necessary
-		console.log("Arrival time: " + moment(nextArrival).format("HHmm"));
+		//console.log("Arrival time: " + moment(nextArrival).format("HHmm"));
 
 		var arrivalDisplay = moment(nextArrival).format("HHmm");
 

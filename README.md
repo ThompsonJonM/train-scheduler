@@ -6,6 +6,10 @@ CHANGELOG
 
 READ FROM BOTTOM TO TOP
 
+20170616 - 1411
+
+LOGIC.JS: Input validation added.
+
 20170616 - 1339
 
 LOGIC.JS: Logic finished. Input validation needs to be constructed.
