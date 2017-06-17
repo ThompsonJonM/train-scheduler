@@ -6,6 +6,10 @@ CHANGELOG
 
 READ FROM BOTTOM TO TOP
 
+20170617 - 1418
+
+LOGIC.JS: Final validation added.
+
 20170617 - 1250
 
 INDEX.HTML: Added link in footer.

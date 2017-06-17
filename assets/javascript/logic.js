@@ -46,6 +46,8 @@ $(document).ready(function() {
 					});
 
 			} else {
+				alert("Please enter valid train data");
+				$("input").val("");
 				return false;
 			}
 
@@ -109,7 +111,6 @@ $(document).ready(function() {
 
 		var arrivalDisplay = moment(nextArrival).format("HHmm");
 
-
 	//append data to table
 	$("#boardText").append(
 		"<tr><td id='nameDisplay'>" + childSnapshot.val().name + 
@@ -119,6 +120,8 @@ $(document).ready(function() {
 		"<td id='arrivalDisplay'>" + arrivalDisplay + 
 		"<td id='awayDisplay'>" + timeAway + " minutes until arrival" + "</td></tr>");
 
+		// console.log(arrivalDisplay);
+		// console.log(timeAway);
 	});
 
 	//reset functionality
@@ -126,5 +129,8 @@ $(document).ready(function() {
     	location.reload();
 	});
 
+	//auto refresh per 1 minute passed
+	//updates the train data upon refresh
+	setInterval("window.location.reload()", 60000);
 });
 
