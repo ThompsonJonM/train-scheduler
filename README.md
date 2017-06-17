@@ -6,6 +6,16 @@ CHANGELOG
 
 READ FROM BOTTOM TO TOP
 
+20170617 - 1232
+
+LOGIC.JS: Added further validation.
+
+INDEX.HTML: Added further validation and more bootstrap elements.
+
+STYLE.CSS: Added further styling.
+
+IMAGES: Created.
+
 20170616 - 1411
 
 LOGIC.JS: Input validation added.

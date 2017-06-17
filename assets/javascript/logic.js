@@ -1,14 +1,15 @@
 $(document).ready(function() {
 
 	//Firebase link
-	var config = {
-		apiKey: "AIzaSyCC1rwzzaDUgAwYC9_E-nag7lyXe0Uw1k0",
-		authDomain: "train-scheduler-db-c5ca0.firebaseapp.com",
-		databaseURL: "https://train-scheduler-db-c5ca0.firebaseio.com",
-		projectId: "train-scheduler-db-c5ca0",
-		storageBucket: "train-scheduler-db-c5ca0.appspot.com",
-		messagingSenderId: "832417526249"
-	};
+
+  	var config = {
+	    apiKey: "AIzaSyC1zUvc5K6NJXFxwm74405gegKYfPSNT-4",
+	    authDomain: "train-schedule-db.firebaseapp.com",
+	    databaseURL: "https://train-schedule-db.firebaseio.com",
+	    projectId: "train-schedule-db",
+	    storageBucket: "train-schedule-db.appspot.com",
+	    messagingSenderId: "60174437847"
+  	};
 
 	firebase.initializeApp(config);
 
@@ -32,7 +33,7 @@ $(document).ready(function() {
 			if (nameInput != "" &&
 				numberInput != "" &&
 				destinationInput != "" &&
-				timeInput != "" &&
+				timeInput.length === 4 &&
 				frequencyInput != "") {
 
 					//use the collected input (above) and port it to firebase db
